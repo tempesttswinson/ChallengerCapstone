@@ -12,7 +12,13 @@
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li><a routerLink="/home" class="nav-item nav-link active">Home</a></li>
-                    <li><a routerLink="/seller/product" class="nav-item nav-link">Products</a></li>
+                    <li class="dropdown">
+                        <a routerLink="/seller/product" class="nav-item nav-link" data-toogle="dropdown">Products</a>
+                        <div class="dropdown-menu" *ngIf="!currentUser || currentUser.role == Role.Customer">
+                            <a class="dropdown-item" routerLink="/category/0">Fruits</a>
+                            <a class="dropdown-item" routerLink="/category/1">Veggies</a>
+                        </div>
+                    </li>
                     <li><a routerLink="/contact-us" class="nav-item nav-link">Contact Us</a></li>
                     <li><a *ngIf="!currentUser || currentUser.role == Role.Customer" class="nav-item nav-link "
                             routerLink="/cart"><img src="../../assets/cartIcon.png" alt="Checkout"></a></li>
@@ -21,8 +27,29 @@
                         <a href="#" class="nav-item nav-link" data-toggle="dropdown"><img
                                 src="../../assets/userIcon.png" alt="User"></a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" data-toggle="modal" data-target="#myModal">Log In</a>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#myModal2">Register</a>
+                            <ng-container *ngIf="currentUser; else noUser">
+                                <a class="dropdown-item " routerLink="/order">
+                                    <i class="fas fa-list-ul"></i>
+                                    Orders
+                                </a>
+                                <a class="dropdown-item " routerLink="/profile">
+                                    {{name}}
+                                </a>
+                                <a class="dropdown-item" (click)="logout()" routerLink="/login"
+                                    [queryParams]="{logout: true}">
+                                    Sign Out
+                                </a>
+                            </ng-container>
+                            <ng-template #noUser>
+                                <a class="dropdown-item " routerLink="/login">
+                                    Sign In
+                                </a>
+                                <a class="dropdown-item " routerLink="/register">
+                                    Sign Up
+                                </a>
+                            </ng-template>
+                            <!-- <a class="dropdown-item" data-toggle="modal" data-target="#myModal">Log In</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#myModal2">Register</a> -->
 
                         </div>
                     </li>

@@ -1,0 +1,36 @@
+.container {
+    margin-top: 10px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+  }
+  .image {
+    margin-top: 135px;
+    background: url("../../../assets/photo-backgrd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .or-seperator {
+    margin: 20px 0 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+  .or-seperator i {
+    padding: 0 10px;
+    background: #f7f7f7;
+    position: relative;
+    top: -11px;
+    z-index: 1;
+  }
+  .social-btn .btn {
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left;
+    line-height: 24px;
+  }
+  .social-btn .btn i {
+    float: left;
+    margin: 4px 15px 0 5px;
+    min-width: 15px;
+  }
