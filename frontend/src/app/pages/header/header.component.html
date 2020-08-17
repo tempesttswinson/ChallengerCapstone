@@ -1,7 +1,7 @@
 <header class="header-area overlay">
     <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
-            <a routerLink="/home" class="navbar-brand img-responsive"><img src="../../assets/smallLogo.png" alt=""></a>
+            <a routerLink="/home" class=" "><img src="../../assets/smallLogo.png" alt=""></a>
 
             <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
                 <span class="menu-icon-bar"></span>
@@ -13,7 +13,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li><a routerLink="/home" class="nav-item nav-link active">Home</a></li>
                     <li class="dropdown">
-                        <a routerLink="/seller/product" class="nav-item nav-link" data-toogle="dropdown">Products</a>
+                        <a class="nav-item nav-link" data-toogle="dropdown">Products</a>
                         <div class="dropdown-menu" *ngIf="!currentUser || currentUser.role == Role.Customer">
                             <a class="dropdown-item" routerLink="/category/0">Fruits</a>
                             <a class="dropdown-item" routerLink="/category/1">Veggies</a>

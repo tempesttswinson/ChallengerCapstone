@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { UserService } from "../../services/user.service";
+import { Subscription } from "rxjs";
+import { JwtResponse } from "../../response/JwtResponse";
+import { Router } from "@angular/router";
+import { Role } from "../../enum/Role";
 import * as $ from 'jquery';
 import Popper from 'popper.js';
 
@@ -7,11 +12,29 @@ import Popper from 'popper.js';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  currentUserSubscription: Subscription;
+  name$;
+  name: string;
+  currentUser: JwtResponse;
+  root = '/';
+  Role = Role;
 
-  ngOnInit(): void {
+  constructor(private userService: UserService,
+    private router: Router,) { }
+
+  ngOnInit() {
+    this.name$ = this.userService.name$.subscribe(aName => this.name = aName);
+    this.currentUserSubscription = this.userService.currentUser.subscribe(user => {
+      this.currentUser = user;
+      if (!user || user.role == Role.Customer) {
+        this.root = '/';
+      } else {
+        this.root = '/seller';
+      }
+    });
+
     $(function () {
       $(window).on('scroll', function () {
         if ($(this).scrollTop() >= 200) {
@@ -108,4 +131,14 @@ export class HeaderComponent implements OnInit {
     })
 
   };
+
+  ngOnDestroy(): void {
+    this.currentUserSubscription.unsubscribe();
+    // this.name$.unsubscribe();
+  }
+
+  logout() {
+    this.userService.logout();
+    // this.router.navigate(['/login'], {queryParams: {logout: 'true'}} );
+  }
 }
