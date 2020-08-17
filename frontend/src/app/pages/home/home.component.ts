@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
         $(this).parents(".card-header").toggleClass("highlight");
       });
     });
+
   }
 
 }

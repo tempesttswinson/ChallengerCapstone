@@ -145,6 +145,12 @@ border: 0;
   p{
       color: #197163;
   }
+  .subtitle{
+    color: #fadcac;
+    font-size: 45px;
+    text-shadow: 5px 5px #197163;
+
+  }
   .banner {
     display: flex;
     align-items: center;
@@ -281,3 +287,22 @@ border: 0;
     transform: rotate(180deg);
   }
   /* end of css for about us */
+  /*carousal*/
+  .carousel .item {
+    width: 100%; /*slider width*/
+   
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+/*end of carousal css*/
+/*our team*/
+.flexrow {
+  display: flex;
+  background: lightgray; /*for debug*/
+}
+.flexrow > * {
+  flex: 1;
+  margin: 1em;
+  outline: auto green;
+}
