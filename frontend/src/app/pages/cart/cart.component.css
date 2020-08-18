@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     margin-bottom: 25px;
 }
@@ -47,3 +48,9 @@
   a{
       color: black;
   }
+=======
+.container {
+    margin-top: 130px;
+    height : 500px;
+  }
+>>>>>>> 50006633e37a87591fc2aeb966e566a1636efaf3
