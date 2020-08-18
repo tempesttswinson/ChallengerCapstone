@@ -28,7 +28,11 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "dev": "react-scripts start",
+              "start": "serve -s build",
+              "build": "react-scripts build",
+              "heroku-postbuild": "npm run build"
             ]
           },
           "configurations": {
