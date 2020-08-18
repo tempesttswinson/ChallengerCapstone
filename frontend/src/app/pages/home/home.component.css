@@ -213,7 +213,7 @@ padding-top: 100px;
   /* css for about us */
   .aboutUs{
     background-color: #065446;
-    height: 725px;
+    height: 750px;
   }
   body {
     background: #fff;
@@ -298,5 +298,9 @@ padding-top: 100px;
   outline: auto green;
 }
 
+.row{
+  padding-right: 0px;
+  padding-left: 0px;
+}
 
 
