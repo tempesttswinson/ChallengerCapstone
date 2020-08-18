@@ -41,3 +41,6 @@ server:
 
 jwtSecret: me.zhulin
 jwtExpiration: 86400
+
+server: 
+  port: ${PORT:8080}
