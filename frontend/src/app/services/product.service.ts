@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
-import {catchError} from 'rxjs/operators';
-import {ProductInfo} from '../models/productInfo';
-import {apiUrl} from '../../environments/environment';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ProductInfo } from '../models/productInfo';
+import { apiUrl } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,7 @@ export class ProductService {
     }
 
     getAllInPage(page: number, size: number): Observable<any> {
-        const url = `${this.productUrl}?page=${page}&size=${size}`;
+        const url = `${this.productUrl}?page=${page}&size=${9}`;
         return this.http.get(url)
             .pipe(
                 // tap(_ => console.log(_)),
@@ -25,7 +25,7 @@ export class ProductService {
     }
 
     getCategoryInPage(categoryType: number, page: number, size: number): Observable<any> {
-        const url = `${this.categoryUrl}/${categoryType}?page=${page}&size=${size}`;
+        const url = `${this.categoryUrl}/${categoryType}?page=${page}&size=${9}`;
         return this.http.get(url).pipe(
             // tap(data => console.log(data))
         );

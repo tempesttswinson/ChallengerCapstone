@@ -20,7 +20,7 @@ ul{
 .padding-lg {
 	display: block;
 	padding-top: 60px;
-	padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 .practice-area.padding-lg {
     padding-bottom: 55px;
@@ -56,7 +56,6 @@ ul{
 .our-webcoderskull{
   /* background: url("assets/chantal-garnier-910GanwBoew-unsplash.jpg") no-repeat center top / cover; */
   background-color: #065446;
-  
 }
 .our-webcoderskull .cnt-block{ 
    float:left; 
@@ -65,7 +64,7 @@ ul{
    padding:30px 20px; 
    text-align:center; 
    border:2px solid #d5d5d5;
-   margin: 20 20 28px;
+   margin:  20 20 28px;
 }
 .our-webcoderskull .cnt-block figure{
    width:148px; 
@@ -129,9 +128,10 @@ ul{
     /* background-repeat: no-repeat; */
     background-size: cover;
 
-margin: 0;
-padding: 0;
-border: 0; 
+margin-top: 120px;
+
+padding-top: 100px;
+
  }
 
   h1 {
@@ -166,13 +166,7 @@ border: 0;
   .banner p {
     font-weight: 700;
   }
-  .header-area {
-    position: relative;
-    height: 125vh;
-    /* background-position: center center; */
-    background-repeat: no-repear;
-    background-size: cover;
-  }
+  
   .button {
     /* display: inline-block; */
     margin-top: 20px;
@@ -214,18 +208,13 @@ border: 0;
     -ms-transform: scaleX(1);
     transform: scaleX(1);
   }
-  .container-fluid{
-      width: 100%;
-  }
-  .div{
-      width: 100%;
-  }
-
-  .story p{
-    color: black;
-  }
+  
 
   /* css for about us */
+  .aboutUs{
+    background-color: #065446;
+    height: 725px;
+  }
   body {
     background: #fff;
   }
@@ -245,11 +234,13 @@ border: 0;
   }
   .accordion .card-header .btn {
     color: #2f2f31;
-    font-size: 1.04rem;
+    /* font-size: 1.04rem; */
     text-align: left;
     position: relative;
     font-weight: 500;
     padding-left: 2rem;
+    font-size: 20px;
+
   }
   .accordion .card-header i {
     font-size: 1.2rem;
@@ -259,11 +250,12 @@ border: 0;
     top: 9px;
   }
   .accordion .card-header .btn:hover {
-    color: #ff8300;
+    color: #fadcac;
   }
   .accordion .card-body {
-    color: #324353;
+    color: white;
     padding: 0.5rem 3rem;
+    font-size: 15px;
   }
   .page-title {
     margin: 3rem 0 3rem 1rem;
@@ -286,6 +278,11 @@ border: 0;
   .accordion .highlight i {
     transform: rotate(180deg);
   }
+  .aboutUsImg{
+    height: 555px;
+    width:685px;
+    margin-top:50px;
+  }
   /* end of css for about us */
   /*carousal*/
  
@@ -300,3 +297,6 @@ border: 0;
   margin: 1em;
   outline: auto green;
 }
+
+
+

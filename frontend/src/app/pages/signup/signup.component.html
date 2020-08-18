@@ -1,5 +1,5 @@
 <div class="image" style="width: 100%;">
-  <div class="container" style="width: 60%; margin: 25px auto;">
+  <div class="container" style="width: 50%; margin: 25px auto;">
     <h1 align="center" class="display-4 mb-5">Sign Up</h1>
     <div style="width: 40%; margin: 25px auto;">
       <form #form="ngForm" (ngSubmit)="onSubmit()">
@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!form.form.valid">
+          <button type="submit" class="btn btn-lg button-primary btn-block" [disabled]="!form.form.valid">
             Sign Up
           </button>
         </div>
