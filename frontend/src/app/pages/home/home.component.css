@@ -4,15 +4,21 @@
     font-size: 52.52px;
     line-height: 95px;
     font-weight: 400;
-    text-align: center;
+    text-align: center ;
     margin: 0 0 40px;
     padding-bottom: 20px;
     text-transform: uppercase;
+    /* padding-left: 125px;
+    margin-left: 65px; */
+  
 }
+
 ul{
-  margin:0;
-  padding:0;
+  /* margin:0;
+  padding:0; */
   list-style:none;
+  margin-top: 45px;
+  padding-top: 65px;
 }
 .heading.heading-icon {
     display: block;
@@ -58,7 +64,7 @@ ul{
   background-color: #065446;
 }
 .our-webcoderskull .cnt-block{ 
-   float:left; 
+   /* float:left;  */
    width:100%; 
    background:#fff; 
    padding:30px 20px; 
