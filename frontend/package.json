@@ -21,6 +21,8 @@
     "@angular/router": "~7.1.0",
     "@types/googlemaps": "^3.39.12",
     "bootstrap": "^4.0.0",
+    "browserslist": "^4.14.0",
+    "caniuse-lite": "^1.0.30001115",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "ngx-cookie-service": "^2.1.0",
