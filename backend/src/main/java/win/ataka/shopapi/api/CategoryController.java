@@ -1,6 +1,5 @@
 package win.ataka.shopapi.api;
 
-
 import win.ataka.shopapi.entity.ProductCategory;
 import win.ataka.shopapi.entity.ProductInfo;
 import win.ataka.shopapi.service.CategoryService;
@@ -11,15 +10,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
-@CrossOrigin
+@RequestMapping("/api")
+@CrossOrigin(origins = { "http://localhost:8080", "https://ataka-organix.herokuapp.com/" })
 public class CategoryController {
     @Autowired
     CategoryService categoryService;
     @Autowired
     ProductService productService;
-
 
     /**
      * Show products in category
@@ -31,8 +29,8 @@ public class CategoryController {
      */
     @GetMapping("/category/{type}")
     public CategoryPage showOne(@PathVariable("type") Integer categoryType,
-                                @RequestParam(value = "page", defaultValue = "1") Integer page,
-                                @RequestParam(value = "size", defaultValue = "3") Integer size) {
+            @RequestParam(value = "page", defaultValue = "1") Integer page,
+            @RequestParam(value = "size", defaultValue = "3") Integer size) {
 
         ProductCategory cat = categoryService.findByCategoryType(categoryType);
         PageRequest request = PageRequest.of(page - 1, size);

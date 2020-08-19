@@ -1,24 +1,24 @@
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: password
-    url: jdbc:postgresql://localhost/postgres
-    platform: postgres
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER-CLASS-NAME}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+    platform: org.hibernate.dialect.PostgresSQLDialect
     initialization-mode: always
     continue-on-error: true
   jpa:
     show-sql: false
 #    generate-ddl: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: ${create}
     database: postgresql
     properties:
       hibernate:
         temp:
           use_jdbc_metadata_defaults: false;
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database-platform: ${SPRING_JPA_DATABASE-PLATFORM}
   #      dialect: org.hibernate.dialect.MySQL5Dialect
 
 #  jackson:
